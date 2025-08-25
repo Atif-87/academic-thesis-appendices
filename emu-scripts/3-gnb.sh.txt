@@ -34,5 +34,3 @@ for ((i=1; i<=GNB_COUNT; i++)); do
 done
 
 echo "All gNBs started in background. Use 'ps' or check '$LOG_DIR/' for logs."
-
-
