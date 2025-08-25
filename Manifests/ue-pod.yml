@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netshoot-cplane
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netshoot-cplane
+  template:
+    metadata:
+      labels:
+        app: netshoot-cplane
+      annotations:
+        k8s.v1.cni.cncf.io/networks: cplane
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: kmaster
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
+      containers:
+      - name: netshoot
+        image: nicolaka/netshoot
+        command: ["sleep", "infinity"]
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: emu-volume
+          mountPath: /usr/local/emu
+      volumes:
+      - name: emu-volume
+        hostPath:
+          path: /usr/local/emu
+          type: DirectoryOrCreate

@@ -1,0 +1,9 @@
+loxilb:
+  multusTrafficIP: "10.10.3.215"
+  multusTrafficnetMask: "24"
+  image:
+    repository: ghcr.io/loxilb-io/loxilb
+    pullPolicy: IfNotPresent
+    tag: "latest"
+  clientStartCmd: "loxicmd create lb 10.10.3.215 --sctp=38412:38412 --endpoints=10.10.3.192:1 --mode=onearm"
+  
