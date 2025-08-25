@@ -1,1 +1,38 @@
+Starts multiple gNB instances on different ports (1200–1230) and logs their outputs.
+
+#!/bin/bash
+GNB_IP="10.10.3.219"
+LOXILB_IP="10.10.3.215"
+LOXILB_PORT="38412"
+GNB_START_PORT=1200
+GNB_COUNT=$1
+LOG_DIR="./logs"
+
+if ! [[ "$GNB_COUNT" =~ ^[0-9]+$ ]]; then
+  echo "Usage: $0 <gnb_count>"
+  exit 1
+fi
+
+echo "Cleaning old logs and UE state..."
+rm -rf ./gnb/*
+mkdir -p "$LOG_DIR"
+rm -f "$LOG_DIR"/gnb-*.log
+
+echo "Killing any existing gNB processes..."
+pkill -f "./run/bin/cmd" 2>/dev/null
+
+for ((i=1; i<=GNB_COUNT; i++)); do
+  PORT=$((GNB_START_PORT + i - 1))
+  LOG_FILE="$LOG_DIR/gnb-${i}.log"
+  echo "Starting gNB-$i on port $PORT... Logging to $LOG_FILE"
+  ./run/bin/cmd ./run/config_gnb.json -v -t -u "$PORT" -e "$GNB_IP" -g -n "$LOXILB_IP"
+  if [ $? -eq 0 ]; then
+    echo "gNB-$i started successfully."
+  else
+    echo "Failed to start gNB-$i."
+  fi
+done
+
+echo "All gNBs started in background. Use 'ps' or check '$LOG_DIR/' for logs."
+
 
