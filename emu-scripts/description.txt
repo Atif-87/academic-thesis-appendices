@@ -12,3 +12,28 @@ The repository holds the reference scripts, which were utilized in the process o
 
 These scripts assist in automating the UE actions along with conducting network operations within controlled test networks.
 
+
+
+Generate UE configuration files
+
+./gen-file.sh
+# Example:
+# Enter starting IMSI [default: 1000000001]: 1000000001
+# Enter number of UEs to generate [default: 10]: 5
+
+
+
+Start gNB instances
+
+./gnb.sh 5
+# Starts 5 gNB instances from port 1200 to 1204
+
+
+Simulate UE operations
+
+
+./all.sh
+# Choose one of:
+# reg   → Registration
+# pdu   → PDU Session Establishment
+# unreg → De-registration
