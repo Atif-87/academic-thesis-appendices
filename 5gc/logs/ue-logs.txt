@@ -1,0 +1,120 @@
+root@nshoot-79cd588d87-sgnvm:/usr/local/emu/run# ./bin/ue -m 1000000001 -g -y 999 -u 99 -c 1 -v -v -t -s 10.10.3.216 -n 10.10.3.219 1200
+
+Host IP 10.10.3.216.
+Connecting to IP 10.10.3.219.
+Connecting to port 1200.
+Security header type:    0
+Spare half octet:        0
+Message type:            41
+5GS registration type:   1
+USIM KSI:                0
+IMSI:                    Next octets
+UE:  =Send=> 5g NAS MM  'NGS_Registration_request', 41H 
+UE: <=Read=  5g NAS MM  'NGS_Authentication_request', 56.
+Security header type:    0
+Spare half octet:        0
+ABBA      [0000], length 2
+RAND      [805002A8BF5A80B7239D5C3AB977ABE9], length 16.
+SQNxorAK  [77988B232373], length 6.
+AMF       [8000], length 2.
+MAC       [F5D9145E7D23D178], length 8.
+5G messages.
+Not mapped request: native security context, KSIasme or KSIamf
+K:        [000102030405060708090A0B0C0D0E0F], length 16.
+AK:       [77988B23239300000000000000000000], length 16.
+SQNxorAK: [77988B232373], length 6.
+SQN:      [0000000000E0], length 6.
+F1 MAC:   [F5D9145E7D23D178], length 8.
+Request MAC: [F5D9145E7D23D178], length 8.
+RES* was  [7E96C3B1B304160B26EA1CCCC8B52C393D62CA728D05A94E0C6CCF419E9BA40B] LENGTH 32, ERR 0.
+IK:       [D0F4BAF6A7690BA5714FED9589D3567D], length 16.
+CK:       [7006E1D3EC9DBFF1782E10B309E87802], length 16.
+RES*:     [3D62CA728D05A94E0C6CCF419E9BA40B], length 16.
+CK||IK [7006E1D3EC9DBFF1782E10B309E87802D0F4BAF6A7690BA5714FED9589D3567D]
+Knasint [8515A9FCB1FFC209306CDE30D4F629D0], length 16 (err 0) keydatalen 32 datalen 63.
+UE:  =Send=> 5g NAS MM  'NGS_Authentication_response', 57H 
+        Integrity key
+        Algorithm type distinguisher 02
+root@nshoot-79cd588d87-sgnvm:/usr/local/emu/run# ./bin/ue -m 1000000001 -g -y 999 -u 99 -c 2 -v -v -t -s 10.10.3.216 -n 10.10.3.219 1200
+
+Host IP 10.10.3.216.
+Connecting to IP 10.10.3.219.
+Connecting to port 1200.
+Security header type:    0
+Spare half octet:        0
+Message type:            41
+5GS registration type:   1
+USIM KSI:                1
+IMSI:                    Next octets
+EPS id:                             01
+Procedure transaction identity:     00
+Message identity:                   C1
+Rate up:                            FF
+Rate down:                          FF
+PDU session type:                   91 .
+SSC mode:                           A1.
+
+1000000001|999991000000001 *** Connected. *** [ 1754907117,700920 s ]
+1000000001|999991000000001   *** Send 'NGS_PDU_session_establishment_request' *** [ 1754907117,704633 s ]
+        KSI                                  1
+        Direction                            uplink
+        Bearer id (eps id)                   0
+        K       [46EE07681317B404B8FCF3B52F3E7309] key length 16
+        NONCE   [0000000308000000]
+UE:  =Send=> 5g NAS MM  'NGS_UL_NAS_transport', 67H 
+UE: <=Read=  5g NAS MM  'NGS_DL_NAS_transport', 68.
+                    ESM 'NGS_PDU_session_establishment_accept', C2.
+        KSI                                  1
+        Direction                            downlink
+        Bearer id (eps id)                   0
+        CID                                  1
+        K       [46EE07681317B404B8FCF3B52F3E7309] key length 16
+        NONCE   [000000020C000000]
+5GS NAS link count 2 did not match the message sequence number 3.
+UEDIGESTMISMATCH, message [7E02066E52FD037E00680100632E0100C211000901000631310101FF01060603E80603E82905010A050308220401000001817900060120410101097B00148080211003000010810608080808530608080404251C08696E7465726E6574066D6E63303939066D63633939390467707273120139]
+UEMESSAGEDIGESTFAILED
+5GS NAS link count 2 did not match the message sequence number 3.
+1000000001|999991000000001   *** Read id 68 'NGS_DL_NAS_transport' ESM id C2 'NGS_PDU_session_establishment_accept' ***  ESM C2 'NGS_PDU_session_establishment_accept' *** 
+        * * * * * * * * * * * * * * * * * * * * * * *
+        * Read PDU Session Establishment Accept gNB *
+        * * * * * * * * * * * * * * * * * * * * * * *
+tread: error, errno 4 'Interrupted system call'
+Read error 0 fd 5 (read 0), errno 4 'Interrupted system call'.
+Host IP 10.10.3.216.
+Connecting to IP 10.10.3.219.
+Connecting to port 1200.
+Read error -15 read 0, errno 4 'Interrupted system call',  (clientmode==1, soc 4).
+UE: <=Read=  5g NAS MM  invalid buffer length' idpos 9root@nshoot-79cd588d87-sgnvm:/usr/local/emu/run# 
+
+
+
+
+
+root@nshoot-79cd588d87-sgnvm:/usr/local/emu/run# ./bin/ue -m 1000000001 -g -y 999 -u 99 -c 3 -v -v -t -s 10.10.3.216 -n 10.10.3.219 1200
+
+Host IP 10.10.3.216.
+Connecting to IP 10.10.3.219.
+Connecting to port 1200.
+   *** Send 'Detach_request' *** 
+Security header type:    4 (integrity_protected_eps_ciphered)
+Spare half octet:        0
+Message type:            45
+Deregistration type:     07
+Ngksi:                   1
+5GS mobile identity (suci):
+
+1000000001|999991000000001 *** Connected. *** [ 1754907568,322433 s ]
+1000000001|999991000000001   *** Sent 'Detach request', 0. *** [ 1754907568,326374 s ]
+Host IP 10.10.3.216.
+Connecting to IP 10.10.3.219.
+Connecting to port 1200.
+        KSI                                  1
+        Direction                            uplink
+        Bearer id (eps id)                   0
+        K       [46EE07681317B404B8FCF3B52F3E7309] key length 16
+        NONCE   [0000000408000000]
+UE:  =Send=> 5g NAS MM  'NGS_Deregistration_request_UE_orig', 45H 
+tread: error, errno 4 'Interrupted system call'
+Read error 0 fd 5 (read 0), errno 4 'Interrupted system call'.
+Read error -15 read 0, errno 4 'Interrupted system call',  (clientmode==1, soc 4).
+UE: <=Read=  5g NAS MM  'invalid message' [00].root@nshoot-79cd588d87-sgnvm:/usr/local/emu/run# 
