@@ -1,0 +1,1138 @@
+                    (*)
+                    Reading IE Field 'id_AMFName' 'reject' 01d, 0001H, optional.
+                    asn type 'printablestring'
+                    Reading ASN type 'printablestring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RelativeAMFCapacity' 'ignore' 86d, 0056H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_PLMNSupportList' 'reject' 80d, 0050H as PDU field.
+                    PDU asn type 'sequence of'
+                    READING ITEM 1 OF 1.
+                    (*)
+                    Reading IE Field 'id_PLMNSupportItem' 'reject' 5073d, 13D1H.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 40 1 bits
+                    (*)
+                    Reading IE Field 'undeclared id_PLMNIdentity 20029' 'reject' 20029d, 4E3DH.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_SliceSupportList' 'reject' 97d, 0061H.
+                    asn type 'sequence of'
+                     (result 1).
+                    TOGETHER 1 ITEMS.
+                    READING ITEM 1 OF 2.
+                    (*)
+                    Reading IE Field 'id_SliceSupportItem' 'reject' 5094d, 13E6H.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 10 2 bits
+                    (*)
+                    Reading IE Field 'id_S_NSSAI' 'reject' 148d, 0094H.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 10 3 bits
+                    (*)
+                    Reading IE Field 'undeclared id_SST 20174' 'reject' 20174d, 4ECEH.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 5 
+                    (*)
+                    Reading IE Field 'undeclared id_SD 20175' 'reject' 20175d, 4ECFH, optional.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_CriticalityDiagnostics' 'ignore' 19d, 0013H as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_UERetentionInformation' 'ignore' 147d, 0093H as PDU field, optional.
+ ran_id 0001| amf_id 0000   *** Read NGSetup, successful. *** [ 1754907036,103709 s ]
+                    End of message reached.
+                    Listening UE connections port [1200] IP [10.10.3.219] queue size 6
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Executing NAS proc from UE MM 41H 'NGS_Registration_request'          *
+* message content length 28, message id read err 0                   *
+* data [7E0041F1000D0199F999FF1F000001000000101001012E0480A080A0] *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Context management from UE 0FH 'InitialUEMessage' *
+* ue_mme_id 0                                                         *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                    
+SEND
+Pid           [1218] 
+fd            [16 domain] 
+Message type  [00] initiating class2
+Procedurecode [0F] InitialUEMessage
+Initiated     [1754907080 s]
+Criticality   [01] invalid criticality 1
+h[00] 'octetstring' h[0F] 'bitstring' h[40]Send asn sequence in 'sequence of' using buffer 'octetcache' octetcache preamble 0x0000 length 0 
+                    add sequence bitcount 'id_FiveG_S_TMSI' as '0' 
+                    add sequence bitcount 'id_AMFSetID' as '0' 
+                    add sequence bitcount 'id_UEContextRequest' as '0' 
+                    add sequence bitcount 'id_AllowedNSSAI' as '0' 
+                    add sequence bitcount 'id_SourceToTarget_AMFInformationReroute' as '0' 
+                     Preamble bitcount was 5 (buf 1, octetbuf [o]), optionals in one byte.o[00] Not extensible.o[00] write length o[04]
+                    (*) octetbuf [000004] buf [000F40]
+                    Send IE field 'id_RAN_UE_NGAP_ID' 0055 as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0055]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[00]e[01]
+                    o[02]
+                    (*) octetbuf [000004005500020001] buf [000F40]
+                    Send IE field 'id_NAS_PDU' 0026 as 'octetstring' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0026]
+                    Criticality:        o[00]
+                      Send asn basic type 'octetstring' using cache 2 'iepage [e]'e[1C] 'octetstring' e[7E0041F1000D0199F999FF1F000001000000101001012E0480A080A0]
+                    o[1D]
+                    (*) octetbuf [0000040055000200010026001D1C7E0041F1000D0199F999FF1F000001000000101001012E0480A080A0] buf [000F40]
+                    Send IE field 'id_UserLocationInformation' 0079 as 'choice' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0079]
+                    Criticality:        o[00]Next in choice of.
+                    Send IE 'undeclared id_UserLocationInformationNR 20210' 4EF2 as 'sequence' using cache 2 iepage [e] 
+                    Sending extensible asn 'sequence' using cache item [i]
+                    Send asn sequence using buffer 'item' item preamble 0x0040 length 2 
+                     Preamble bitcount was 1 (buf 3, item [i]), optionals in one byte. Extensible.
+                    Send IE 'id_NR_CGI' 002D as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0040 length 3 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_NRCellIdentity 20127' 4E9F as 'bitstring' using cache 4 subitem [s] 
+                      Send asn basic type 'bitstring' using cache 4 'subitem [s]' 'bitstring' s[01009999]
+                    End send asn sequence.Cbuf subitem preamble 0x0090 length 4 [4099F99901009999]
+                    Send IE 'undeclared id_TAI 20012' 4E2C as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0000 length 4 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_TAC 20188' 4EDC as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[003132]
+                    End send asn sequence.Cbuf subitem preamble 0x0000 length -1 [0099F999003132]
+                    End send asn sequence.Cbuf item preamble 0x0000 length 0 [4099F999010099990099F999003132]
+                    shiftwriting,  from 3 'item [i]' to 2 'iepage [e]' contentlen 15, preamblelen 0, range -1, writing length 15.e[0F]
+                    (*) octetbuf [0000040055000200010026001D1C7E0041F1000D0199F999FF1F000001000000101001012E0480A080A00079000F4099F999010099990099F999003132] buf [000F40]
+                    Send IE field 'id_RRCEstablishmentCause' 005A as 'enumeration' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[005A]
+                    Criticality:        o[40]
+                      Send asn basic type 'enumeration' using cache 2 'iepage [e]' 'enumeration' e[40]
+                    o[01]
+                    End send asn sequence.Cbuf octetcache preamble 0x0000 length 0 [0000040055000200010026001D1C7E0041F1000D0199F999FF1F000001000000101001012E0480A080A00079000F4099F999010099990099F999003132005A400140]
+ ran_id 0001| amf_id 0000   *** Send InitialUEMessage, initiating, EMM 'NGS_Registration_request'       65/41. *** [ 1754907080,701273 s ]
+                    
+READ
+Pid           [1216] 
+fd            [7 soc] 
+Message type  [00] initiating class2
+Procedurecode [04] DownlinkNASTransport
+Initiated
+Criticality   [40] ignore
+Length        [41]
+Preamble      [41] inputcursor 4.
+Extensions    [00] inputcursor 5.
+Length        [00] inputcursor 6.
+                    Reading asn sequence items, preamble 41 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'ignore' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'ignore' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    shiftoncommit, octetcache to header. h[42]
+READ
+Pid           [1218] 
+fd            [16 domain] 
+Message type  [00] initiating class2
+Procedurecode [04] DownlinkNASTransport
+Initiated
+Criticality   [40] ignore
+Length        [41]
+Preamble      [41] inputcursor 4.
+Extensions    [00] inputcursor 5.
+Length        [00] inputcursor 6.
+                    Reading asn sequence items, preamble 41 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'reject' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'reject' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_OldAMF' 'reject' 48d, 0030H as PDU field, optional.
+                    Item id [30] did not match.
+                    (*)
+                    Reading IE Field 'id_RANPagingPriority' 'ignore' 83d, 0053H as PDU field, optional.
+                    Matching previous ID 38 AND 83 id_RANPagingPriority <=> id_NAS_PDU
+                    (*)
+                    Reading IE Field 'id_NAS_PDU' 'reject' 38d, 0026H as PDU field.
+                    Matching previous ID 38 AND 38 id_NAS_PDU <=> id_NAS_PDUPDU asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_MobilityRestrictionList' 'ignore' 36d, 0024H as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_IndexToRFSP' 'ignore' 31d, 001FH as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_UEAggregateMaximumBitRate' 'ignore' 110d, 006EH as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_AllowedNSSAI' 'reject' 00d, 0000H as PDU field, optional.
+ ran_id 0001| amf_id 50331838   *** Read DownlinkNASTransport, initiating, EMM 'Unknown, 1'     1/01. *** [ 1754907080,799739 s ]
+                    End of message reached.
+SEND
+Pid           [1218] 
+fd            [16 domain] 
+Message type  [00] initiating class2
+Procedurecode [2E] UplinkNASTransport
+Initiated     [1754907080 s]
+Criticality   [01] invalid criticality 1
+h[00] 'octetstring' h[2E] 'bitstring' h[40]Send asn sequence in 'sequence of' using buffer 'octetcache' octetcache preamble 0x0000 length 0  No preamble optionals.o[00] Not extensible.o[00] write length o[04]
+                    (*) octetbuf [000004] buf [002E40]
+                    Send IE field 'id_AMF_UE_NGAP_ID' 000A as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[000A]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[60]e[03]e[00]e[00]e[BE]
+                    o[05]
+                    (*) octetbuf [000004000A000560030000BE] buf [002E40]
+                    Send IE field 'id_RAN_UE_NGAP_ID' 0055 as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0055]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[00]e[01]
+                    o[02]
+                    (*) octetbuf [000004000A000560030000BE005500020001] buf [002E40]
+                    Send IE field 'id_NAS_PDU' 0026 as 'octetstring' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0026]
+                    Criticality:        o[00]
+                      Send asn basic type 'octetstring' using cache 2 'iepage [e]'e[15] 'octetstring' e[7E00572D103D62CA728D05A94E0C6CCF419E9BA40B]
+                    o[16]
+                    (*) octetbuf [000004000A000560030000BE00550002000100260016157E00572D103D62CA728D05A94E0C6CCF419E9BA40B] buf [002E40]
+                    Send IE field 'id_UserLocationInformation' 0079 as 'choice' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0079]
+                    Criticality:        o[40]Next in choice of.
+                    Send IE 'undeclared id_UserLocationInformationNR 20210' 4EF2 as 'sequence' using cache 2 iepage [e] 
+                    Sending extensible asn 'sequence' using cache item [i]
+                    Send asn sequence using buffer 'item' item preamble 0x0040 length 2 
+                     Preamble bitcount was 1 (buf 3, item [i]), optionals in one byte. Extensible.
+                    Send IE 'id_NR_CGI' 002D as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0040 length 3 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_NRCellIdentity 20127' 4E9F as 'bitstring' using cache 4 subitem [s] 
+                      Send asn basic type 'bitstring' using cache 4 'subitem [s]' 'bitstring' s[01009999]
+                    End send asn sequence.Cbuf subitem preamble 0x0090 length 4 [4099F99901009999]
+                    Send IE 'undeclared id_TAI 20012' 4E2C as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0000 length 4 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_TAC 20188' 4EDC as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[003132]
+                    End send asn sequence.Cbuf subitem preamble 0x0000 length -1 [0099F999003132]
+                    End send asn sequence.Cbuf item preamble 0x0000 length 0 [4099F999010099990099F999003132]
+                    shiftwriting,  from 3 'item [i]' to 2 'iepage [e]' contentlen 15, preamblelen 0, range -1, writing length 15.e[0F]
+                    End send asn sequence.Cbuf octetcache preamble 0x0000 length 0 [000004000A000560030000BE00550002000100260016157E00572D103D62CA728D05A94E0C6CCF419E9BA40B0079400F4099F999010099990099F999003132]
+ ran_id 0001| amf_id 50331838   *** Send UplinkNASTransport, initiating, EMM 'NGS_Authentication_response'      87/57. *** [ 1754907080,801149 s ]
+                    
+READ
+Pid           [1216] 
+fd            [7 soc] 
+Message type  [00] initiating class2
+Procedurecode [04] DownlinkNASTransport
+Initiated
+Criticality   [40] ignore
+Length        [28]
+Preamble      [28] inputcursor 4.
+Extensions    [00] inputcursor 5.
+Length        [00] inputcursor 6.
+                    Reading asn sequence items, preamble 28 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'reject' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'reject' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    shiftoncommit, octetcache to header. h[3F]
+READ
+Pid           [1218] 
+fd            [16 domain] 
+Message type  [00] initiating class2
+Procedurecode [04] DownlinkNASTransport
+Initiated     [1754907080 s]
+Criticality   [40] ignore
+Length        [28]
+Preamble      [28] inputcursor 4.
+Extensions    [00] inputcursor 5.
+Length        [00] inputcursor 6.
+                    Reading asn sequence items, preamble 28 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'reject' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'reject' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_OldAMF' 'reject' 48d, 0030H as PDU field, optional.
+                    Item id [30] did not match.
+                    (*)
+                    Reading IE Field 'id_RANPagingPriority' 'ignore' 83d, 0053H as PDU field, optional.
+                    Matching previous ID 38 AND 83 id_RANPagingPriority <=> id_NAS_PDU
+                    (*)
+                    Reading IE Field 'id_NAS_PDU' 'reject' 38d, 0026H as PDU field.
+                    Matching previous ID 38 AND 38 id_NAS_PDU <=> id_NAS_PDUPDU asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_MobilityRestrictionList' 'ignore' 36d, 0024H as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_IndexToRFSP' 'ignore' 31d, 001FH as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_UEAggregateMaximumBitRate' 'ignore' 110d, 006EH as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_AllowedNSSAI' 'reject' 00d, 0000H as PDU field, optional.
+                    End of message reached.
+SEND
+Pid           [1218] 
+fd            [16 domain] 
+Message type  [00] initiating class2
+Procedurecode [2E] UplinkNASTransport
+Initiated     [1754907080 s]
+Criticality   [01] invalid criticality 1
+h[00] 'octetstring' h[2E] 'bitstring' h[40]Send asn sequence in 'sequence of' using buffer 'octetcache' octetcache preamble 0x0000 length 0  No preamble optionals.o[00] Not extensible.o[00] write length o[04]
+                    (*) octetbuf [000004] buf [002E40]
+                    Send IE field 'id_AMF_UE_NGAP_ID' 000A as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[000A]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[60]e[03]e[00]e[00]e[BE]
+                    o[05]
+                    (*) octetbuf [000004000A000560030000BE] buf [002E40]
+                    Send IE field 'id_RAN_UE_NGAP_ID' 0055 as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0055]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[00]e[01]
+                    o[02]
+                    (*) octetbuf [000004000A000560030000BE005500020001] buf [002E40]
+                    Send IE field 'id_NAS_PDU' 0026 as 'octetstring' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0026]
+                    Criticality:        o[00]
+                      Send asn basic type 'octetstring' using cache 2 'iepage [e]'e[0A] 'octetstring' e[7E04578031A3017E005E]
+                    o[0B]
+                    (*) octetbuf [000004000A000560030000BE0055000200010026000B0A7E04578031A3017E005E] buf [002E40]
+                    Send IE field 'id_UserLocationInformation' 0079 as 'choice' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0079]
+                    Criticality:        o[40]Next in choice of.
+                    Send IE 'undeclared id_UserLocationInformationNR 20210' 4EF2 as 'sequence' using cache 2 iepage [e] 
+                    Sending extensible asn 'sequence' using cache item [i]
+                    Send asn sequence using buffer 'item' item preamble 0x0040 length 2 
+                     Preamble bitcount was 1 (buf 3, item [i]), optionals in one byte. Extensible.
+                    Send IE 'id_NR_CGI' 002D as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0040 length 3 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_NRCellIdentity 20127' 4E9F as 'bitstring' using cache 4 subitem [s] 
+                      Send asn basic type 'bitstring' using cache 4 'subitem [s]' 'bitstring' s[01009999]
+                    End send asn sequence.Cbuf subitem preamble 0x0090 length 4 [4099F99901009999]
+                    Send IE 'undeclared id_TAI 20012' 4E2C as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0000 length 4 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_TAC 20188' 4EDC as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[003132]
+                    End send asn sequence.Cbuf subitem preamble 0x0000 length -1 [0099F999003132]
+                    End send asn sequence.Cbuf item preamble 0x0000 length 0 [4099F999010099990099F999003132]
+                    shiftwriting,  from 3 'item [i]' to 2 'iepage [e]' contentlen 15, preamblelen 0, range -1, writing length 15.e[0F]
+                    End send asn sequence.Cbuf octetcache preamble 0x0000 length 0 [000004000A000560030000BE0055000200010026000B0A7E04578031A3017E005E0079400F4099F999010099990099F999003132]
+ ran_id 0001| amf_id 50331838   *** Send UplinkNASTransport, initiating, EMM 'NGS_Security_mode_complete'       94/5E. *** [ 1754907080,924765 s ]
+                    
+READ
+Pid           [1216] 
+fd            [7 soc] 
+Message type  [00] initiating class1
+Procedurecode [0E] InitialContextSetup
+Initiated
+Criticality   [00] reject
+Length        [93]
+Preamble      [93] inputcursor 5.
+Extensions    [00] inputcursor 6.
+Length        [00] inputcursor 7.
+                    Reading asn sequence items, preamble 93 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'reject' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'reject' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    shiftoncommit, octetcache to header. h[34]
+READ
+Pid           [1218] 
+fd            [16 domain] 
+Message type  [00] initiating class1
+Procedurecode [0E] InitialContextSetup
+Initiated     [1754907080 s]
+Criticality   [00] reject
+Length        [93]
+Preamble      [93] inputcursor 5.
+Extensions    [00] inputcursor 6.
+Length        [00] inputcursor 7.
+                    Reading asn sequence items, preamble 93 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'reject' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'reject' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_OldAMF' 'reject' 48d, 0030H as PDU field, optional.
+                    Item id [30] did not match.
+                    (*)
+                    Reading IE Field 'id_UEAggregateMaximumBitRate' 'reject' 110d, 006EH as PDU field, conditional.
+                    Matching previous ID 28 AND 110 id_UEAggregateMaximumBitRate <=> id_GUAMI
+                    (*)
+                    Reading IE Field 'id_CoreNetworkAssistanceInformationForInactive' 'ignore' 18d, 0012H as PDU field, optional.
+                    Matching previous ID 28 AND 18 id_CoreNetworkAssistanceInformationForInactive <=> id_GUAMI
+                    (*)
+                    Reading IE Field 'id_GUAMI' 'reject' 28d, 001CH as PDU field.
+                    Matching previous ID 28 AND 28 id_GUAMI <=> id_GUAMIPDU asn type 'sequence'
+                    Reading asn sequence items, preamble 00 1 bits
+                    (*)
+                    Reading IE Field 'undeclared id_PLMNIdentity 20029' 'reject' 20029d, 4E3DH.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'undeclared id_AMFRegionID 20103' 'reject' 20103d, 4E87H.
+                    asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_AMFSetID' 'reject' 03d, 0003H.
+                    asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'undeclared id_AMFPointer 20089' 'reject' 20089d, 4E79H.
+                    asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_PDUSessionResourceSetupListCxtReq' 'reject' 71d, 0047H as PDU field, optional.
+                    Item id [47] did not match.
+                    (*)
+                    Reading IE Field 'id_AllowedNSSAI' 'reject' 00d, 0000H as PDU field.
+                    Matching previous ID 0 AND 0 id_AllowedNSSAI <=> id_AllowedNSSAIPDU asn type 'sequence of'
+                    READING ITEM 1 OF 3.
+                    (*)
+                    Reading IE Field 'id_AllowedNSSAI_Item' 'reject' 5001d, 1389H.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 00 1 bits
+                    (*)
+                    Reading IE Field 'id_S_NSSAI' 'reject' 148d, 0094H.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 01 3 bits
+                    (*)
+                    Reading IE Field 'undeclared id_SST 20174' 'reject' 20174d, 4ECEH.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 5 
+                    (*)
+                    Reading IE Field 'id_UESecurityCapabilities' 'reject' 119d, 0077H as PDU field.
+                    PDU asn type 'sequence'
+                    Reading asn sequence items, preamble 00 2 bits
+                    (*)
+                    Reading IE Field 'undeclared id_NRencryptionAlgorithms 20203' 'reject' 20203d, 4EEBH.
+                    asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 6 
+                    (*)
+                    Reading IE Field 'undeclared id_NRintegrityProtectionAlgorithms 20204' 'reject' 20204d, 4EECH.
+                    asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'undeclared id_EUTRAencryptionAlgorithms 20205' 'reject' 20205d, 4EEDH.
+                    asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'undeclared id_EUTRAintegrityProtectionAlgorithms 20206' 'reject' 20206d, 4EEEH.
+                    asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_SecurityKey' 'reject' 94d, 005EH as PDU field.
+                    PDU asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_TraceActivation' 'ignore' 108d, 006CH as PDU field, optional.
+                    Item id [6C] did not match.
+                    (*)
+                    Reading IE Field 'id_MobilityRestrictionList' 'ignore' 36d, 0024H as PDU field, optional.
+                    Matching previous ID 38 AND 36 id_MobilityRestrictionList <=> id_NAS_PDU
+                    (*)
+                    Reading IE Field 'id_UERadioCapability' 'ignore' 117d, 0075H as PDU field, optional.
+                    Matching previous ID 38 AND 117 id_UERadioCapability <=> id_NAS_PDU
+                    (*)
+                    Reading IE Field 'id_IndexToRFSP' 'ignore' 31d, 001FH as PDU field, optional.
+                    Matching previous ID 38 AND 31 id_IndexToRFSP <=> id_NAS_PDU
+                    (*)
+                    Reading IE Field 'id_MaskedIMEISV' 'ignore' 34d, 0022H as PDU field, optional.
+                    Matching previous ID 38 AND 34 id_MaskedIMEISV <=> id_NAS_PDU
+                    (*)
+                    Reading IE Field 'id_NAS_PDU' 'ignore' 38d, 0026H as PDU field, optional.
+                    Matching previous ID 38 AND 38 id_NAS_PDU <=> id_NAS_PDUPDU asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_EmergencyFallbackIndicator' 'reject' 24d, 0018H as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_RRCInactiveTransitionReportRequest' 'ignore' 91d, 005BH as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_UERadioCapabilityForPaging' 'ignore' 118d, 0076H as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_RedirectionVoiceFallback' 'ignore' 146d, 0092H as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_LocationReportingRequestType' 'ignore' 33d, 0021H as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_CNAssistedRANTuning' 'ignore' 165d, 00A5H as PDU field, optional.
+                    End of message reached.PDU Session Resource Setup List was not found from the InitialContextSetupRequest.
+Error, class1 non-initiated response message (initiated 0s, class1 1).
+SEND
+Pid           [1218] 
+fd            [16 domain] 
+Message type  [01] successful class1
+Procedurecode [0E] InitialContextSetup
+Complited
+Criticality   [00] reject
+h[20] 'octetstring' h[0E] 'bitstring' h[00]Send asn sequence in 'sequence of' using buffer 'octetcache' octetcache preamble 0x0000 length 0 
+                    add sequence bitcount 'id_PDUSessionResourceSetupListCxtRes' as '0' 
+                    add sequence bitcount 'id_PDUSessionResourceFailedToSetupListCxtRes' as '0' 
+                    add sequence bitcount 'id_CriticalityDiagnostics' as '0' 
+                     Preamble bitcount was 3 (buf 1, octetbuf [o]), optionals in one byte.o[00] Not extensible.o[00] write length o[02]
+                    (*) octetbuf [000002] buf [200E00]
+                    Send IE field 'id_AMF_UE_NGAP_ID' 000A as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[000A]
+                    Criticality:        o[40]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[60]e[03]e[00]e[00]e[BE]
+                    o[05]
+                    (*) octetbuf [000002000A400560030000BE] buf [200E00]
+                    Send IE field 'id_RAN_UE_NGAP_ID' 0055 as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0055]
+                    Criticality:        o[40]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[00]e[01]
+                    o[02]
+                    End send asn sequence.Cbuf octetcache preamble 0x0000 length 0 [000002000A400560030000BE005540020001]
+ ran_id 0001| amf_id 50331838   *** Send InitialContextSetup, successful, EMM 'no nas messages, -1'     -1/FFFFFFFF. *** [ 1754907081,144546 s ]
+                    shiftoncommit, octetcache to header. h[12]
+SEND
+Pid           [1218] 
+fd            [16 domain] 
+Message type  [00] initiating class2
+Procedurecode [2E] UplinkNASTransport
+Initiated     [1754907081 s]
+Criticality   [01] invalid criticality 1
+h[00] 'octetstring' h[2E] 'bitstring' h[40]Send asn sequence in 'sequence of' using buffer 'octetcache' octetcache preamble 0x0000 length 0  No preamble optionals.o[00] Not extensible.o[00] write length o[04]
+                    (*) octetbuf [000004] buf [002E40]
+                    Send IE field 'id_AMF_UE_NGAP_ID' 000A as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[000A]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[60]e[03]e[00]e[00]e[BE]
+                    o[05]
+                    (*) octetbuf [000004000A000560030000BE] buf [002E40]
+                    Send IE field 'id_RAN_UE_NGAP_ID' 0055 as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0055]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[00]e[01]
+                    o[02]
+                    (*) octetbuf [000004000A000560030000BE005500020001] buf [002E40]
+                    Send IE field 'id_NAS_PDU' 0026 as 'octetstring' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0026]
+                    Criticality:        o[00]
+                      Send asn basic type 'octetstring' using cache 2 'iepage [e]'e[0A] 'octetstring' e[7E01BB93CEA8027E0043]
+                    o[0B]
+                    (*) octetbuf [000004000A000560030000BE0055000200010026000B0A7E01BB93CEA8027E0043] buf [002E40]
+                    Send IE field 'id_UserLocationInformation' 0079 as 'choice' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0079]
+                    Criticality:        o[40]Next in choice of.
+                    Send IE 'undeclared id_UserLocationInformationNR 20210' 4EF2 as 'sequence' using cache 2 iepage [e] 
+                    Sending extensible asn 'sequence' using cache item [i]
+                    Send asn sequence using buffer 'item' item preamble 0x0040 length 2 
+                     Preamble bitcount was 1 (buf 3, item [i]), optionals in one byte. Extensible.
+                    Send IE 'id_NR_CGI' 002D as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0040 length 3 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_NRCellIdentity 20127' 4E9F as 'bitstring' using cache 4 subitem [s] 
+                      Send asn basic type 'bitstring' using cache 4 'subitem [s]' 'bitstring' s[01009999]
+                    End send asn sequence.Cbuf subitem preamble 0x0090 length 4 [4099F99901009999]
+                    Send IE 'undeclared id_TAI 20012' 4E2C as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0000 length 4 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_TAC 20188' 4EDC as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[003132]
+                    End send asn sequence.Cbuf subitem preamble 0x0000 length -1 [0099F999003132]
+                    End send asn sequence.Cbuf item preamble 0x0000 length 0 [4099F999010099990099F999003132]
+                    shiftwriting,  from 3 'item [i]' to 2 'iepage [e]' contentlen 15, preamblelen 0, range -1, writing length 15.e[0F]
+                    End send asn sequence.Cbuf octetcache preamble 0x0000 length 0 [000004000A000560030000BE0055000200010026000B0A7E01BB93CEA8027E00430079400F4099F999010099990099F999003132]
+ ran_id 0001| amf_id 50331838   *** Send UplinkNASTransport, initiating, EMM 'NGS_Registration_complete'        67/43. *** [ 1754907081,185287 s ]
+                    shiftoncommit, octetcache to header. h[34]
+
+[ *** *** *** *** *** *** *** *** *** *** UE PROCESS SELECTING max 17 (ue fd 14, soc 14) *** *** *** *** *** *** *** *** *** ]
+
+                    
+READ
+Pid           [1216] 
+fd            [7 soc] 
+Message type  [00] initiating class2
+Procedurecode [04] DownlinkNASTransport
+Initiated
+Criticality   [40] ignore
+Length        [38]
+Preamble      [38] inputcursor 4.
+Extensions    [00] inputcursor 5.
+Length        [00] inputcursor 6.
+                    Reading asn sequence items, preamble 38 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'reject' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'reject' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+
+[ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ FROM AMF +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ ]
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Context management from AMF 04H 'DownlinkNASTransport' *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                    
+READ
+Pid           [1218] 
+fd            [16 domain] 
+Message type  [00] initiating class2
+Procedurecode [04] DownlinkNASTransport
+Initiated
+Criticality   [40] ignore
+Length        [38]
+Preamble      [38] inputcursor 4.
+Extensions    [00] inputcursor 5.
+Length        [00] inputcursor 6.
+                    Reading asn sequence items, preamble 38 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'reject' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'reject' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_OldAMF' 'reject' 48d, 0030H as PDU field, optional.
+                    Item id [30] did not match.
+                    (*)
+                    Reading IE Field 'id_RANPagingPriority' 'ignore' 83d, 0053H as PDU field, optional.
+                    Matching previous ID 38 AND 83 id_RANPagingPriority <=> id_NAS_PDU
+                    (*)
+                    Reading IE Field 'id_NAS_PDU' 'reject' 38d, 0026H as PDU field.
+                    Matching previous ID 38 AND 38 id_NAS_PDU <=> id_NAS_PDUPDU asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_MobilityRestrictionList' 'ignore' 36d, 0024H as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_IndexToRFSP' 'ignore' 31d, 001FH as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_UEAggregateMaximumBitRate' 'ignore' 110d, 006EH as PDU field, optional.
+                    End of message reached.
+                    (*)
+                    Reading IE Field 'id_AllowedNSSAI' 'reject' 00d, 0000H as PDU field, optional.
+ ran_id 0001| amf_id 50331838   *** Read DownlinkNASTransport, initiating, EMM 'Unknown, B0'    176/B0. *** [ 1754907081,400242 s ]
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Executing NAS proc from UE MM 67H 'NGS_UL_NAS_transport'          *
+* message content length 34, message id read err 0                   *
+* data [7E01FF0DF342037E00670100072E0100C1FFFF91120181250908696E7465726E6574] *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Context management from UE 2EH 'UplinkNASTransport' *
+* ue_mme_id 50331838                                                         *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                    
+SEND
+Pid           [1220] 
+fd            [19 domain] 
+Message type  [00] initiating class2
+Procedurecode [2E] UplinkNASTransport
+Initiated     [1754907117 s]
+Criticality   [01] invalid criticality 1
+h[00] 'octetstring' h[2E] 'bitstring' h[40]Send asn sequence in 'sequence of' using buffer 'octetcache' octetcache preamble 0x0000 length 0  No preamble optionals.o[00] Not extensible.o[00] write length o[04]
+                    (*) octetbuf [000004] buf [002E40]
+                    Send IE field 'id_AMF_UE_NGAP_ID' 000A as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[000A]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[60]e[03]e[00]e[00]e[BE]
+                    o[05]
+                    (*) octetbuf [000004000A000560030000BE] buf [002E40]
+                    Send IE field 'id_RAN_UE_NGAP_ID' 0055 as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0055]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[00]e[01]
+                    o[02]
+                    (*) octetbuf [000004000A000560030000BE005500020001] buf [002E40]
+                    Send IE field 'id_NAS_PDU' 0026 as 'octetstring' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0026]
+                    Criticality:        o[00]
+                      Send asn basic type 'octetstring' using cache 2 'iepage [e]'e[22] 'octetstring' e[7E01FF0DF342037E00670100072E0100C1FFFF91120181250908696E7465726E6574]
+                    o[23]
+                    (*) octetbuf [000004000A000560030000BE00550002000100260023227E01FF0DF342037E00670100072E0100C1FFFF91120181250908696E7465726E6574] buf [002E40]
+                    Send IE field 'id_UserLocationInformation' 0079 as 'choice' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0079]
+                    Criticality:        o[40]Next in choice of.
+                    Send IE 'undeclared id_UserLocationInformationNR 20210' 4EF2 as 'sequence' using cache 2 iepage [e] 
+                    Sending extensible asn 'sequence' using cache item [i]
+                    Send asn sequence using buffer 'item' item preamble 0x0040 length 2 
+                     Preamble bitcount was 1 (buf 3, item [i]), optionals in one byte. Extensible.
+                    Send IE 'id_NR_CGI' 002D as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0040 length 3 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_NRCellIdentity 20127' 4E9F as 'bitstring' using cache 4 subitem [s] 
+                      Send asn basic type 'bitstring' using cache 4 'subitem [s]' 'bitstring' s[01009999]
+                    End send asn sequence.Cbuf subitem preamble 0x0090 length 4 [4099F99901009999]
+                    Send IE 'undeclared id_TAI 20012' 4E2C as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0000 length 4 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_TAC 20188' 4EDC as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[003132]
+                    End send asn sequence.Cbuf subitem preamble 0x0000 length -1 [0099F999003132]
+                    End send asn sequence.Cbuf item preamble 0x0000 length 0 [4099F999010099990099F999003132]
+                    shiftwriting,  from 3 'item [i]' to 2 'iepage [e]' contentlen 15, preamblelen 0, range -1, writing length 15.e[0F]
+                    End send asn sequence.Cbuf octetcache preamble 0x0000 length 0 [000004000A000560030000BE00550002000100260023227E01FF0DF342037E00670100072E0100C1FFFF91120181250908696E7465726E65740079400F4099F999010099990099F999003132]
+ ran_id 0001| amf_id 50331838   *** Send UplinkNASTransport, initiating, EMM 'NGS_UL_NAS_transport'     103/67. *** [ 1754907117,708422 s ]
+                    shiftoncommit, octetcache to header. h[4C]
+
+[ *** *** *** *** *** *** *** *** *** *** UE PROCESS SELECTING max 20 (ue fd 14, soc 14) *** *** *** *** *** *** *** *** *** ]
+
+                    
+READ
+Pid           [1216] 
+fd            [7 soc] 
+Message type  [00] initiating class1
+Procedurecode [1D] PDUSessionResourceSetup
+Initiated
+Criticality   [00] reject
+Length        [D6]
+Preamble      [D6] inputcursor 5.
+Extensions    [00] inputcursor 6.
+Length        [00] inputcursor 7.
+                    Reading asn sequence items, preamble D6 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'reject' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'reject' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+
+[ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ FROM AMF +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ ]
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Context management from AMF 1DH 'PDUSessionResourceSetup' *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                    
+READ
+Pid           [1220] 
+fd            [19 domain] 
+Message type  [00] initiating class1
+Procedurecode [1D] PDUSessionResourceSetup
+Initiated
+Criticality   [00] reject
+Length        [D6]
+Preamble      [D6] inputcursor 5.
+Extensions    [00] inputcursor 6.
+Length        [00] inputcursor 7.
+                    Reading asn sequence items, preamble D6 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_AMF_UE_NGAP_ID' 'reject' 10d, 000AH as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RAN_UE_NGAP_ID' 'reject' 85d, 0055H as PDU field.
+                    PDU asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_RANPagingPriority' 'ignore' 83d, 0053H as PDU field, optional.
+                    Item id [53] did not match.
+                    (*)
+                    Reading IE Field 'id_NAS_PDU' 'reject' 38d, 0026H as PDU field, optional.
+                    Matching previous ID 74 AND 38 id_NAS_PDU <=> id_PDUSessionResourceSetupListSUReq
+                    (*)
+                    Reading IE Field 'id_PDUSessionResourceSetupListSUReq' 'reject' 74d, 004AH as PDU field.
+                    Matching previous ID 74 AND 74 id_PDUSessionResourceSetupListSUReq <=> id_PDUSessionResourceSetupListSUReq 2B length 177 B, 00B1 PDU asn type 'sequence of'
+                    READING ITEM 1 OF 1.
+                    (*)
+                    Reading IE Field 'id_PDUSessionResourceSetupItemSUReq' 'reject' 5067d, 13CBH.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 40 2 bits
+                    (*)
+                    Reading IE Field 'undeclared id_PDUSessionID 20138' 'reject' 20138d, 4EAAH.
+                    asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 6 
+                    (*)
+                    Reading IE Field 'id_NAS_PDU' 'reject' 38d, 0026H, optional.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_S_NSSAI' 'reject' 148d, 0094H.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 40 3 bits
+                    (*)
+                    Reading IE Field 'undeclared id_SST 20174' 'reject' 20174d, 4ECEH.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 5 
+                    (*)
+                    Reading IE Field 'undeclared id_SD 20175' 'reject' 20175d, 4ECFH, optional.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'undeclared id_OCTET 20139' 'reject' 20139d, 4EABH.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_UEAggregateMaximumBitRate' 'ignore' 110d, 006EH as PDU field, optional.
+                    PDU asn type 'sequence'
+                    Reading asn sequence items, preamble 0C 2 bits
+                    (*)
+                    Reading IE Field 'undeclared id_BitRate 20092' 'ignore' 20092d, 4E7CH.
+                    asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 6 
+                    (*)
+                    Reading IE Field 'undeclared id_BitRate 20092' 'ignore' 20092d, 4E7CH.
+                    asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    CRITICALITY [00] inputcursor 2
+                    Reading asn sequence items, preamble 00 7 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_PDUSessionAggregateMaximumBitRate' 'reject' 130d, 0082H as PDU field, optional.
+                    PDU asn type 'sequence'
+                    Reading asn sequence items, preamble 0C 2 bits
+                    (*)
+                    Reading IE Field 'undeclared id_BitRate 20092' 'reject' 20092d, 4E7CH.
+                    asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 6 
+                    (*)
+                    Reading IE Field 'undeclared id_BitRate 20092' 'reject' 20092d, 4E7CH.
+                    asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_UL_NGU_UP_TNLInformation' 'reject' 139d, 008BH as PDU field.
+                    PDU asn type 'choice'
+                    (*)
+                    Reading IE Field 'undeclared id_GTPTunnel 20208' 'reject' 20208d, 4EF0H.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 00 2 bits
+                    (*)
+                    Reading IE Field 'undeclared id_TransportLayerAddress 20045' 'reject' 20045d, 4E4DH.
+                    asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 6 
+                    (*)
+                    Reading IE Field 'undeclared id_GTP_TEID 20102' 'reject' 20102d, 4E86H.
+                    asn type 'octetstring'
+                    Reading ASN type 'octetstring' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_AdditionalUL_NGU_UP_TNLInformation' 'reject' 126d, 007EH as PDU field, optional.
+                    Item id [7E] did not match.
+                    (*)
+                    Reading IE Field 'id_DataForwardingNotPossible' 'reject' 127d, 007FH as PDU field, optional.
+                    Matching previous ID 134 AND 127 id_DataForwardingNotPossible <=> id_PDUSessionType
+                    (*)
+                    Reading IE Field 'id_PDUSessionType' 'reject' 134d, 0086H as PDU field.
+                    Matching previous ID 134 AND 134 id_PDUSessionType <=> id_PDUSessionTypePDU asn type 'enumeration'
+                    Reading ASN type 'enumeration' remaining bits 0 
+                    (*)
+                    Reading IE Field 'id_SecurityIndication' 'reject' 138d, 008AH as PDU field, optional.
+                    PDU asn type 'sequence'
+                    Reading asn sequence items, preamble 09 2 bits
+                    (*)
+                    Reading IE Field 'undeclared id_IntegrityProtectionIndication 20167' 'reject' 20167d, 4EC7H.
+                    asn type 'enumeration'
+                    Reading ASN type 'enumeration' remaining bits 6 
+                    (*)
+                    Reading IE Field 'undeclared id_ConfidentialityProtectionIndication 20168' 'reject' 20168d, 4EC8H.
+                    asn type 'enumeration'
+                    Reading ASN type 'enumeration' remaining bits 3 
+                    (*)
+                    Reading IE Field 'id_NetworkInstance' 'reject' 129d, 0081H as PDU field, optional.
+                    Item id [81] did not match.
+                    (*)
+                    Reading IE Field 'id_QosFlowSetupRequestList' 'reject' 136d, 0088H as PDU field.
+                    Matching previous ID 136 AND 136 id_QosFlowSetupRequestList <=> id_QosFlowSetupRequestListPDU asn type 'sequence of'
+                    READING ITEM 1 OF 1.
+                    (*)
+                    Reading IE Field 'id_QosFlowSetupRequestItem' 'reject' 5082d, 13DAH.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 01 2 bits
+                    (*)
+                    Reading IE Field 'undeclared id_QosFlowIdentifier 20016' 'reject' 20016d, 4E30H.
+                    asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 6 
+                    (*)
+                    Reading IE Field 'undeclared id_QosFlowLevelQosParameters 20150' 'reject' 20150d, 4EB6H.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 01 4 bits
+                    (*)
+                    Reading IE Field 'undeclared id_QosCharacteristics 20151' 'reject' 20151d, 4EB7H.
+                    asn type 'choice'
+                    (*)
+                    Reading IE Field 'undeclared id_NonDynamic5QIDescriptor 20148' 'reject' 20148d, 4EB4H.
+                    asn type 'sequence'
+                    Reading asn sequence items, preamble 09 4 bits
+                    (*)
+                    Reading IE Field 'undeclared id_FiveQI 20066' 'reject' 20066d, 4E62H.
+                    asn type 'integer'
+                    Reading ASN type 'integer' remaining bits 4 
+                    (*)
+                    Reading IE Field 'undeclared id_PriorityLevelQos 20063' 'reject' 20063d, 4E5FH, optional.
+                    asn type 'integer'
+                    Reading ASN type 'integer' remaining bits -1 
+* * * * * * * * * * * * * * * * * * * * *
+* SMF Transfer read, octetstring 53 B   *
+* * * * * * * * * * * * * * * * * * * * *
+
+execve: error, errno 2 'No such file or directory'.
+* * * * * * * * * * * * * * * * * * * * *
+* SMF Transfer read, octetstring 53 B   *
+* * * * * * * * * * * * * * * * * * * * *
+
+* * * * * * * * * * * * * * * *
+* WRITING RESPONSE TO AMF/SMF *
+* * * * * * * * * * * * * * * *
+* UE  ms IP 10.10.3.216 *
+* UE  gw IP 10.10.3.207 *
+* MGM ms IP 10.10.3.216 *
+* MGM gw IP 10.10.3.207 *
+* PDUSessionID 1        *
+* TEID IN 143 OUT 143      *
+* * * * * * * * * * * * *
+* * * * * * * * * * * * * * *
+* SMF Response Transfer     *
+* * * * * * * * * * * * * * *
+Process 1222 exit status 'WIFEXITED, exit status 255', wstatus FF00.
+                    Send IE 'ngtype_PDUSessionResourceSetupResponseTransfer' 0516 as 'sequence' using cache 4 subitem [s] 
+                    Sending extensible asn 'sequence' using cache subsubitem [su]
+                    Send asn sequence using buffer 'subsubitem' subsubitem preamble 0x0000 length 0 
+                    add sequence bitcount 'undeclared id_QosFlowPerTNLInformationList 20145' as '0' 
+                    add sequence bitcount 'id_SecurityResult' as '0' 
+                    add sequence bitcount 'undeclared id_QosFlowListWithCause 20106' as '0' 
+                    add sequence bitcount 'undeclared id_Extensions_Container 20221' as '0' 
+                     Preamble bitcount was 5 (buf 5, subsubitem [su]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_QosFlowPerTNLInformation 20146' 4EB2 as 'sequence' using cache 5 subsubitem [su] 
+                    Sending extensible asn 'sequence' using cache sub3item [s3]
+                    Send asn sequence using buffer 'sub3item' sub3item preamble 0x0000 length 5 
+                    add sequence bitcount 'undeclared id_Extensions_Container 20221' as '0' 
+                     Preamble bitcount was 2 (buf 6, sub3item [s3]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_UPTransportLayerInformation 20220' 4EFC as 'choice' using cache 6 sub3item [s3] s5[00]
+                    Send IE 'undeclared id_GTPTunnel 20208' 4EF0 as 'sequence' using cache 7 sub4item [s4] 
+                    Sending extensible asn 'sequence' using cache sub5item [s5]
+                    Send asn sequence using buffer 'sub5item' sub5item preamble 0x0000 length 0 
+                    add sequence bitcount 'undeclared id_Extensions_Container 20221' as '0' 
+                     Preamble bitcount was 2 (buf 8, sub5item [s5]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_TransportLayerAddress 20045' 4E4D as 'bitstring' using cache 8 sub5item [s5] 
+                      Send asn basic type 'bitstring' using cache 8 'sub5item [s5]'s5[1F] 'bitstring' s5[00]s5[0A0A03D8]
+                    Send IE 'undeclared id_GTP_TEID 20102' 4E86 as 'octetstring' using cache 8 sub5item [s5] 
+                      Send asn basic type 'octetstring' using cache 8 'sub5item [s5]' 'octetstring' s5[0000008F]
+                    End send asn sequence.Cbuf sub5item preamble 0x0000 length 0 [0003E00A0A03D80000008F]
+                    Send IE 'undeclared id_AssociatedQosFlowList 20062' 4E5E as 'sequence of' using cache 6 sub3item [s3]  writing 'sequence of' item count (*) '1' buf 'sub4item' s3[00]sequence'.
+                    Send asn sequence of field.
+                    Send IE 'id_AssociatedQosFlowItem' 1393 as 'sequence' using cache 7 sub4item [s4] 
+                    Sending extensible asn 'sequence' using cache sub5item [s5]
+                    Send asn sequence using buffer 'sub5item' sub5item preamble 0x0000 length 0 
+                    add sequence bitcount 'undeclared id_Extensions_Container 20221' as '0' 
+                     Preamble bitcount was 2 (buf 8, sub5item [s5]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_QosFlowIdentifier 20016' 4E30 as 'integer' using cache 8 sub5item [s5] 
+                      Send asn basic type 'integer' using cache 8 'sub5item [s5]']
+                    End send asn sequence.Cbuf sub5item preamble 0x0008 length 6 [01]
+                    Next in sequence of.
+                    Last in sequence of.
+                    End send asn sequence.Cbuf sub3item preamble 0x0000 length 0 [0003E00A0A03D80000008F0001]
+                    End send asn sequence.Cbuf subsubitem preamble 0x0000 length 0 [0003E00A0A03D80000008F0001]
+                    
+Error, class1 non-initiated response message (initiated 0s, class1 1).
+SEND
+Pid           [1220] 
+fd            [19 domain] 
+Message type  [01] successful class1
+Procedurecode [1D] PDUSessionResourceSetup
+Complited
+Criticality   [00] reject
+h[20] 'octetstring' h[1D] 'bitstring' h[00]Send asn sequence in 'sequence of' using buffer 'octetcache' octetcache preamble 0x0000 length 0 
+                    add sequence bitcount 'id_PDUSessionResourceSetupListSURes' as '1' 
+                    add sequence bitcount 'id_PDUSessionResourceFailedToSetupListSURes' as '0' 
+                    add sequence bitcount 'id_CriticalityDiagnostics' as '0' 
+                     Preamble bitcount was 3 (buf 1, octetbuf [o]), optionals in one byte.o[00] Not extensible.o[00] write length o[03]
+                    (*) octetbuf [000003] buf [201D00]
+                    Send IE field 'id_AMF_UE_NGAP_ID' 000A as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[000A]
+                    Criticality:        o[40]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[60]e[03]e[00]e[00]e[BE]
+                    o[05]
+                    (*) octetbuf [000003000A400560030000BE] buf [201D00]
+                    Send IE field 'id_RAN_UE_NGAP_ID' 0055 as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0055]
+                    Criticality:        o[40]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[00]e[01]
+                    o[02]
+                    (*) octetbuf [000003000A400560030000BE005540020001] buf [201D00]
+                    Send IE field 'id_PDUSessionResourceSetupListSURes' 004B as 'sequence of' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[004B]
+                    Criticality:        o[40] writing 'sequence of' item count (*) '1' buf 'iepage' i[00]sequence'.
+                    Send asn sequence of field.
+                    Send IE 'id_PDUSessionResourceSetupItemSURes' 13CC as 'sequence' using cache 2 iepage [e] 
+                    Sending extensible asn 'sequence' using cache item [i]
+                    Send asn sequence using buffer 'item' item preamble 0x0000 length 0 
+                    add sequence bitcount 'undeclared id_Extensions_Container 20221' as '0' 
+                     Preamble bitcount was 2 (buf 3, item [i]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PDUSessionID 20138' 4EAA as 'integer' using cache 3 item [i] 
+                      Send asn basic type 'integer' using cache 3 'item [i]']
+                    Send IE 'undeclared id_OCTET 20139' 4EAB as 'octetstring' using cache 3 item [i] contains 'ngtype_PDUSessionResourceSetupResponseTransfer' 1302  
+                      Send asn basic type 'octetstring' using cache 3 'item [i]'i[0D] 'octetstring' i[0003E00A0A03D80000008F0001]
+                    End send asn sequence.Cbuf item preamble 0x0000 length 0 [0000010D0003E00A0A03D80000008F0001]
+                    shiftwriting,  from 3 'item [i]' to 2 'iepage [e]' contentlen 17, preamblelen 0, range -1, writing length 17.e[11]Next in sequence of.
+                    Last in sequence of.
+                    End send asn sequence.Cbuf octetcache preamble 0x0000 length 0 [000003000A400560030000BE005540020001004B40110000010D0003E00A0A03D80000008F0001]
+ ran_id 0001| amf_id 50331838   *** Send PDUSessionResourceSetup, successful, EMM 'no nas messages, -1'         -1/FFFFFFFF. *** [ 1754907117,831613 s ]
+ 
+ 
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Executing NAS proc from UE MM 45H 'NGS_Deregistration_request_UE_orig'          *
+* message content length 26, message id read err 0                   *
+* data [7E014F75AFC1047E044517000D0199F999FF1F00000100000010] *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+0x45 ngap_get_UEContextReleaseRequest
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Context management from UE 2AH 'UEContextReleaseRequest' *
+* ue_mme_id 50331838                                                         *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                    
+SEND
+Pid           [1223] 
+fd            [21 domain] 
+Message type  [00] initiating class2
+Procedurecode [2E] UplinkNASTransport
+Initiated     [1754907568 s]
+Criticality   [01] invalid criticality 1
+h[00] 'octetstring' h[2E] 'bitstring' h[40]Send asn sequence in 'sequence of' using buffer 'octetcache' octetcache preamble 0x0000 length 0  No preamble optionals.o[00] Not extensible.o[00] write length o[04]
+                    (*) octetbuf [000004] buf [002E40]
+                    Send IE field 'id_AMF_UE_NGAP_ID' 000A as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[000A]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[60]e[03]e[00]e[00]e[BE]
+                    o[05]
+                    (*) octetbuf [000004000A000560030000BE] buf [002E40]
+                    Send IE field 'id_RAN_UE_NGAP_ID' 0055 as 'integer' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0055]
+                    Criticality:        o[00]
+                      Send asn basic type 'integer' using cache 2 'iepage [e]'e[00]e[01]
+                    o[02]
+                    (*) octetbuf [000004000A000560030000BE005500020001] buf [002E40]
+                    Send IE field 'id_NAS_PDU' 0026 as 'octetstring' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0026]
+                    Criticality:        o[00]
+                      Send asn basic type 'octetstring' using cache 2 'iepage [e]'e[1A] 'octetstring' e[7E014F75AFC1047E044517000D0199F999FF1F00000100000010]
+                    o[1B]
+                    (*) octetbuf [000004000A000560030000BE0055000200010026001B1A7E014F75AFC1047E044517000D0199F999FF1F00000100000010] buf [002E40]
+                    Send IE field 'id_UserLocationInformation' 0079 as 'choice' using cache 1 octetbuf [o] 
+                    ProtocolIE_ID:      o[0079]
+                    Criticality:        o[40]Next in choice of.
+                    Send IE 'undeclared id_UserLocationInformationNR 20210' 4EF2 as 'sequence' using cache 2 iepage [e] 
+                    Sending extensible asn 'sequence' using cache item [i]
+                    Send asn sequence using buffer 'item' item preamble 0x0040 length 2 
+                     Preamble bitcount was 1 (buf 3, item [i]), optionals in one byte. Extensible.
+                    Send IE 'id_NR_CGI' 002D as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0040 length 3 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_NRCellIdentity 20127' 4E9F as 'bitstring' using cache 4 subitem [s] 
+                      Send asn basic type 'bitstring' using cache 4 'subitem [s]' 'bitstring' s[01009999]
+                    End send asn sequence.Cbuf subitem preamble 0x0090 length 4 [4099F99901009999]
+                    Send IE 'undeclared id_TAI 20012' 4E2C as 'sequence' using cache 3 item [i] 
+                    Sending extensible asn 'sequence' using cache subitem [s]
+                    Send asn sequence using buffer 'subitem' subitem preamble 0x0000 length 4 
+                     Preamble bitcount was 1 (buf 4, subitem [s]), optionals in one byte. Extensible.
+                    Send IE 'undeclared id_PLMNIdentity 20029' 4E3D as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[00]s[99F999]
+                    Send IE 'undeclared id_TAC 20188' 4EDC as 'octetstring' using cache 4 subitem [s] 
+                      Send asn basic type 'octetstring' using cache 4 'subitem [s]' 'octetstring' s[003132]
+                    End send asn sequence.Cbuf subitem preamble 0x0000 length -1 [0099F999003132]
+                    End send asn sequence.Cbuf item preamble 0x0000 length 0 [4099F999010099990099F999003132]
+                    shiftwriting,  from 3 'item [i]' to 2 'iepage [e]' contentlen 15, preamblelen 0, range -1, writing length 15.e[0F]
+                    End send asn sequence.Cbuf octetcache preamble 0x0000 length 0 [000004000A000560030000BE0055000200010026001B1A7E014F75AFC1047E044517000D0199F999FF1F000001000000100079400F4099F999010099990099F999003132]
+ ran_id 0001| amf_id 50331838   *** Send UplinkNASTransport, initiating, EMM 'NGS_Deregistration_request_UE_orig'       69/45. *** [ 1754907568,330600 s ]
+                    shiftoncommit, octetcache to header. h[44]
+
+[ *** *** *** *** *** *** *** *** *** *** UE PROCESS SELECTING max 22 (ue fd 14, soc 14) *** *** *** *** *** *** *** *** *** ]
+
+                    
+READ
+Pid           [1216] 
+fd            [7 soc] 
+Message type  [00] initiating class1
+Procedurecode [29] UEContextRelease
+Initiated
+Criticality   [00] reject
+Length        [13]
+Preamble      [13] inputcursor 4.
+Extensions    [00] inputcursor 5.
+Length        [00] inputcursor 6.
+                    Reading asn sequence items, preamble 13 1 bits in 'sequence of'
+                    (*)
+                    Reading IE Field 'id_UE_NGAP_IDs=114' 'reject' 114d, 0072H as PDU field.
+                    PDU asn type 'choice'
+                    (*)
+                    Reading IE Field 'ngtype_longMacroNgENB_ID' 'reject' 1510d, 05E6H.
+                    asn type 'bitstring'
+                    Reading ASN type 'bitstring' remaining bits 7 
+                    (*)
+                    Reading IE Field 'id_Cause' 'ignore' 15d, 000FH as PDU field.
+                    PDU asn type 'choice'
+                    (*)
+                    Reading IE Field 'undeclared id_CauseRadioNetwork 20031' 'reject' 20031d, 4E3FH.
+                    asn type 'enumeration'
+                    Reading ASN type 'enumeration' remaining bits 6 
+ 
+ 
+ 
+ 
+ 
+ 
+
