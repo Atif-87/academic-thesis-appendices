@@ -1,1 +1,21 @@
+Generates multiple UE configuration files by replacing the SKEL placeholder in SKEL.txt with unique IMSI values.
 
+#!/bin/bash
+# Prompt for starting IMSI with a default value
+read -p "Enter starting IMSI [default: 1000000001]: " START_IMSI
+START_IMSI=${START_IMSI:-1000000001}
+
+# Prompt for UE count with a default value
+read -p "Enter number of UEs to generate [default: 10]: " UE_COUNT
+UE_COUNT=${UE_COUNT:-10}
+
+SKEL_TEMPLATE="SKEL.txt"
+
+for ((i=0; i<UE_COUNT; i++)); do
+  IMSI=$((START_IMSI + i))
+  # Create the output file name in the format 99999IMSI.txt
+  OUTPUT_FILE="./99999${IMSI}.txt"
+  # Replace "SKEL" in the template file with IMSI and create the new file
+  sed "s/SKEL/$IMSI/g" "$SKEL_TEMPLATE" > "$OUTPUT_FILE"
+  echo "Generated file: $OUTPUT_FILE"
+done
