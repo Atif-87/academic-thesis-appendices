@@ -1,0 +1,14 @@
+Testing Scripts Repository
+
+The repository holds the reference scripts, which were utilized in the process of testing UE (User Equipment) and gNB ( Next Generation Node B) simulations. The scripts help in configuration, automation and network operations, including:
+
+1. UE Configuration Template
+
+2. Automatic File Generation (SKELL)
+
+3. gNodeB Instance Management
+
+4. UE Registration/Authentication, PDU Setup and De-Registration
+
+These scripts assist in automating the UE actions along with conducting network operations within controlled test networks.
+
