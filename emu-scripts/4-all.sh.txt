@@ -1,0 +1,56 @@
+Simulates UE operations such as Registration, PDU Session Establishment, and Deregistration.
+
+#!/bin/bash
+# Configuration
+GNB_IP="10.10.3.219"
+UE_SRC_IP="10.10.3.218"
+
+# Prompt for required inputs
+echo "Select operation:"
+echo " 1) reg - Registration"
+echo " 2) pdu - PDU Session Establishment"
+echo " 3) unreg - De-registration"
+read -p "Enter option (reg/pdu/unreg): " ACTION
+read -p "Enter UE count (range): " UE_COUNT
+read -p "Enter starting IMSI (default: 1000000001): " START_IMSI
+START_IMSI=${START_IMSI:-1000000001}
+read -p "Enter GNB port (default: 1200): " GNB_PORT
+GNB_PORT=${GNB_PORT:-1200}
+
+# Validate inputs
+if ! [[ "$UE_COUNT" =~ ^[0-9]+$ ]]; then
+  echo "Error: UE count must be a number."
+  exit 1
+fi
+
+if ! [[ "$GNB_PORT" =~ ^[0-9]+$ ]]; then
+  echo "Error: GNB port must be a number."
+  exit 1
+fi
+
+# Map action to command value
+case "$ACTION" in
+  reg) CMD=1 ;;
+  pdu) CMD=2 ;;
+  unreg) CMD=3 ;;
+  *) 
+    echo "Invalid action. Use reg, pdu, or unreg."
+    exit 1
+    ;;
+esac
+
+# Background function for execution
+run_ue_action() {
+  echo "Starting $ACTION for $UE_COUNT UEs from IMSI $START_IMSI using GNB port $GNB_PORT"
+  for ((i=0; i<UE_COUNT; i++)); do
+    IMSI=$((START_IMSI + i))
+    echo "Processing IMSI: $IMSI"
+    ./bin/ue -m "$IMSI" -g -y 999 -u 99 -c "$CMD" -v -v -t -s "$UE_SRC_IP" -n "$GNB_PORT"
+  done
+  echo "Completed $ACTION for $UE_COUNT UEs."
+}
+
+# Run in background
+run_ue_action &
+PID=$!
+echo "$ACTION job started in background with PID $PID."
